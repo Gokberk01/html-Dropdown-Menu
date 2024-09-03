@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertical Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      ul {
+        list-style-type: none;
+        width: 100%;
+        background-color: #3f3f3f;
+      }
+
+      ul li {
+        display: inline-block;
+        width: 100px;
+        padding: 20px;
+        margin-right: 10px;
+        margin-left: -30px;
+      }
+
+      ul li:hover {
+        background-color: red;
+        transition: 0.5s;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+
+      i {
+        padding-right: 10px;
+      }
+
+      #news-content {
+        position: absolute;
+        z-index: 1;
+        display: none;
+        margin-top: 20px;
+        margin-left: -20px;
+        width: 110px;
+      }
+
+      #news-ul {
+        padding-left: 30px;
+      }
+
+      .news-li:hover #news-content {
+        display: block;
+      }
+
+      #news2-content {
+        position: absolute;
+        z-index: 1;
+        display: none;
+        margin-left: 120px;
+        margin-top: -38px;
+        width: 110px;
+      }
+
+      .news2-li:hover #news2-content {
+        display: block;
+      }
+
+      #new2-ul {
+        padding-left: 34px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#"><i class="fa-solid fa-house-user"></i>Home</a>
+      </li>
+      <li class="news-li">
+        <a href="#"><i class="fa-solid fa-newspaper"></i>News</a>
+        <div id="news-content">
+          <ul id="news-ul">
+            <li style="display: block"><a href="#">News 1</a></li>
+            <li class="news2-li" style="display: block">
+              <a href="#">News 2</a>
+              <div id="news2-content">
+                <ul id="new2-ul">
+                  <li>
+                    <a href="https://www.google.com.tr" target="_blank"
+                      >Detail 1</a
+                    >
+                  </li>
+                  <li><a href="#">Detail 2</a></li>
+                  <li><a href="#">Detail 3</a></li>
+                  <li><a href="#">Detail 4</a></li>
+                </ul>
+              </div>
+            </li>
+            <li style="display: block"><a href="#">News 3</a></li>
+            <li style="display: block"><a href="#">News 4</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.google.com.tr" target="_blank"
+          ><i class="fa-solid fa-address-card"></i>Contact</a
+        >
+      </li>
+      <li>
+        <a href="#"><i class="fa-solid fa-eject"></i>About</a>
+      </li>
+    </ul>
+  </body>
+</html>
